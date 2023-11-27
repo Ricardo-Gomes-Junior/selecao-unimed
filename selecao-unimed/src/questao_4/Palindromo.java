@@ -8,13 +8,13 @@ public class Palindromo {
 //		String palavra = "teste";
 		String palavra = "arara";
 
-		String palavraReverse = "";
+		String palavraReversa = "";
 
 		for (int i = palavra.length() - 1; i >= 0; i--) {
-			palavraReverse = palavraReverse + palavra.charAt(i);
+			palavraReversa = palavraReversa + palavra.charAt(i);
 		}
 
-		boolean palindromo = palavra.equals(palavraReverse);
+		boolean palindromo = palavra.equals(palavraReversa);
 		System.out.println("A palavra testada é um Palindromo? " + palindromo);
 	}
 }
