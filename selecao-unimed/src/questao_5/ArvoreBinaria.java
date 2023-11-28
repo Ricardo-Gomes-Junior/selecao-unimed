@@ -1,4 +1,4 @@
-/* Questão 5. Aplicação da Árvore Binaria, estrutura de dados! */
+/* Questão 5. Aplicação da Árvore Binaria, na qual os métodos acrescentam os valores de acordo com seu valor. */
 
 
 package questao_5;
@@ -18,6 +18,11 @@ class No {
 class ArvoreBinaria {
 	private No raiz;
 
+	public static void main(String[] args) {
+		ArvoreBinaria arvore = new ArvoreBinaria();
+		arvore.percorrerEmOrdem();
+	}
+	
 	public ArvoreBinaria() {
 		raiz = new No(3);
 		raiz.esquerda = new No(2);
@@ -26,7 +31,7 @@ class ArvoreBinaria {
 		raiz.direita.direita = new No(5);
 	}
 
-	public void percorrerEmOrdem() {
+	private void percorrerEmOrdem() {
 		System.out.println("Percurso em Ordem:");
 		percorrerEmOrdem(raiz);
 		System.out.println();
@@ -40,9 +45,4 @@ class ArvoreBinaria {
 		}
 	}
 
-	public static void main(String[] args) {
-		ArvoreBinaria arvore = new ArvoreBinaria();
-
-		arvore.percorrerEmOrdem();
-	}
 }
